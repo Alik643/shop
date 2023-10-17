@@ -1,0 +1,341 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url("/fonts/Roboto-Regular.ttf");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: black;
+    font-family: Roboto;
+}
+.container {
+    display: flex;
+    min-height: 100vh;
+}
+.sidebar {
+    background: #374050;
+    width: -moz-max-content;
+    width: max-content;
+    height: 100%;
+    padding-right: 40px;
+}
+.content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.logo-block {
+    background: white;
+    padding: 18px 13px;
+    border-bottom-right-radius: 20px;
+}
+.site-title {
+    color: white;
+    white-space: break-spaces;
+    width: -moz-min-content;
+    width: min-content;
+}
+.username {
+    color: #A6AFB8;
+    font-family: Roboto;
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 11px;
+    text-decoration: none;
+    margin-right: 10px;
+}
+.login-container {
+    margin-right: 31px;
+    display: flex;
+    align-items: center;
+}
+.top-of-page {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+}
+.sections {
+    margin-left: 17px;
+}
+.sections .section {
+    padding: 25px 0;
+    display: block;
+}
+.sections .section.active {
+    border-bottom: 5px solid #ED1C24;
+    color: #ED1C24;
+}
+.products-container {
+    background: #F2F6FA;
+    height: 100%;
+    position: relative;
+}
+.add-product-button {
+    padding: 10px 42px;
+    border-radius: 6px;
+    font-size: 11px;
+    cursor: pointer;
+    background: #0FC5FF;
+    color: white;
+    position: absolute;
+    right: 18px;
+    top: 17px;
+}
+.popup {
+    width: 70%;
+    max-height: 60vh;
+    min-height: 60vh;
+    border: 1px solid #000;
+    background: #374050;
+    padding: 18px 5px 18px 12px;
+    display: none;
+    position: absolute;
+    left: 50%;
+    top: 50vh;
+    transform: translate(-50%, -50%);
+    overflow: auto;
+}
+.close-popup {
+    cursor: pointer;
+    width: 30px;
+}
+.text-white {
+    color: white;
+}
+.title-and-close {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+.popup-title {
+    font-size: 20px;
+    margin: 0;
+    font-weight: 700;
+}
+.selected-version {
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    background: #fff;
+}
+.availability-status .selected-version span {
+    color: #000;
+}
+.product-action-form .status-versions {
+    display: none;
+}
+.product-action-form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    row-gap: 13px;
+}
+.product-action-form span, .added-attribute span, .product-action-form p {
+    color: #fff;
+}
+.product-action-form input, .availability-status p, .added-attribute input{
+    max-width: 427px;
+    border-radius: 5px;
+    width: 100%;
+    border: none;
+    margin-top: 8px;
+    font-size: 11px;
+    min-height: 30px;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    padding-left: 9px;
+}
+.availability-status p {
+    margin: 0;
+    border-radius: 0;
+}
+.availability-status {
+    border-radius: 5px;
+    overflow: hidden;
+    background: #fff;
+    max-width: 427px;
+}
+.selected-version img {
+    display: block;
+}
+p.active-status-version {
+    background: #50A9FC;
+}
+.availability-status p.status-version {
+    color: #000;
+}
+.attr-title {
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+.fz9 {
+    font-size: 9px;
+}
+.add-attr {
+    color: #5FC6F1;
+    font-size: 9px;
+    border-bottom: 1px dashed #5FC6F1;
+    width: -moz-max-content;
+    width: max-content;
+    cursor: pointer;
+}
+.add-attr-btn, .edit-attr-btn {
+    font-size: 11px;
+    color: #fff;
+    font-weight: 500;
+    background: #0FC5FF;
+    border-radius: 5px;
+    padding: 10px 44px;
+    margin-top: 21px;
+    display: block;
+    cursor: pointer;
+    width: -moz-max-content;
+    width: max-content;
+}
+table.products, table.products th, table.products td {
+    border-collapse: collapse;
+}
+.products thead th {
+    padding: 9px 17px;
+    text-align: left;
+    font-size: 9px;
+    color: #6E6E6F;
+}
+.products tbody {
+    background: #fff;
+}
+.products tbody tr {
+    border-top: 1px solid #C4C4C4;
+    border-bottom: 1px solid #C4C4C4;
+}
+.products tbody td p {
+    color: #6E6E6F;
+    margin-bottom: 2px;
+}
+.products tbody td {
+    color: #6E6E6F;
+    padding: 22px 19px;
+}
+.added-attribute {
+    display: flex;
+    max-width: 427px;
+    gap: 11px;
+    align-items: flex-end;
+    margin-bottom: 13px;
+    justify-content: space-between;
+}
+.product-attributes {
+    margin-top: 13px;
+}
+.added-attribute label {
+    width: 100%;
+}
+.added-attribute input {
+    margin: 0;
+}
+.del-attr {
+    cursor: pointer;
+    display: block;
+    position: relative;
+    bottom: 11px;
+}
+.del-attr img {
+    display: block;
+}
+.text-danger {
+    color: red;
+    font-size: 11px;
+}
+.login-block {
+    width: -moz-max-content;
+    width: max-content;
+    margin: 0 auto;
+}
+.logout-btn {
+    background: transparent;
+    border: none;
+}
+.product-detail {
+    width: 20px;
+    cursor: pointer;
+    height: 20px;
+}
+.show-product-details {
+    display: flex;
+    gap: 28px;
+}
+.show-product-details .keys p {
+    color: rgba(255, 255, 255, 0.70);
+    font-family: Roboto;
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 11px;
+}
+.show-product-details .values p {
+    color: #FFF;
+    font-family: Roboto;
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 11px; /* 100% */
+}
+.attributes p {
+    margin-bottom: 2px;
+}
+.show-product-block-actions, .main-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.main-actions {
+    gap: 2px;
+}
+.main-actions span {
+    cursor: pointer;
+}
+.edit-product img, .delete-product img {
+    width: 12px;
+    height: 12px;
+    display: block;
+}
+.edit-product, .delete-product {
+    display: flex;
+    width: -moz-max-content;
+    width: max-content;
+    height: -moz-max-content;
+    height: max-content;
+    background: rgba(0, 0, 0, 0.40);
+    padding: 4px;
+    align-items: center;
+    justify-content: center;
+}
+.delete-product button {
+    background: transparent;
+    border: none;
+}
+.one-time-message {
+    background: rgba(0, 128, 0, 0.47);
+    border: 1px solid rgb(0, 100, 0);
+    font-size: 18px;
+    width: -moz-max-content;
+    width: max-content;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 5px;
+}
